@@ -3,14 +3,18 @@ def main():
     firstNum = 0
     secondNum = 1
     count = 1
+    fibonacci.append(0, 1)
+    
 
     
     while count <= userInput:
         print(firstNum)
+        
         secondNum += firstNum
         firstNum = secondNum - firstNum
         count += 1
-        
+    
+    print(fibonacci)
     
 
 main()
