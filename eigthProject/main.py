@@ -9,7 +9,7 @@ def bubbleSort(ls):
     return ls
 
 def main():
-    ls = [3, 2, 44, 5, 9, 1]
+    ls = [3, "hello", 44, 5, 9, 1]
     ls = bubbleSort(ls)
     print(ls)
 
