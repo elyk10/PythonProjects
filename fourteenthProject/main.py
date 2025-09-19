@@ -18,6 +18,7 @@ def main():
                 fileName = input("Enter file name: ")
                 try:
                     file = open(fileName, "r")
+                    print(file.read())
                 except:
                     print("File not found")
                     loop = False
