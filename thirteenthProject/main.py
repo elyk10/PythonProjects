@@ -6,7 +6,7 @@ def calcAverage(ls):
 
 
 def main():
-    print(calcAverage([1,2,3]))
+    print(calcAverage())
     print(calcAverage([2,5,6,7,9]))
 
 
