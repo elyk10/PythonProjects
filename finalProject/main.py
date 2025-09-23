@@ -21,6 +21,7 @@ class BankAccount(object):
 
     def withdrawMoney(self, amount):
         self.balance -= amount
+        tempAmount = amount
         if self.balance < 0:
             amount += self.balance
             self.balance = 0
@@ -47,12 +48,33 @@ class BankAccount(object):
 
 
 def main():
-    accounts = []
+    accounts = [BankAccount("Kyle", "Chequeing", 923)]
 
     for i in range(0, 10):
         name = "user" + str(i)
         accounts.append(BankAccount(name, "savings", 1000 * i))
 
+    loop = True
+
+    while loop:
+        addAccount = input("Would you like to add an account (yes/no)?")
+        if addAccount == "yes":
+            name = input("What is the name on the account?")
+            accountType = input("What is the account type?")
+            balance = float(input("What is the intial balance?"))
+            accounts.append(BankAccount(name, accountType, balance))
+        
+        else:
+            loop = False
+
+    accounts[1].withdrawMoney(3000)
+    accounts[1].depostMoney(2)
+    accounts[0].depostMoney(3)
+
+    for i in accounts:
+        print(i.accountNumber)
+        print(i.balance)
+        i.getTransactionHistory()
     
 
 
