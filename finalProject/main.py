@@ -12,7 +12,7 @@ class BankAccount(object):
 
         
         self.filename = str(self.accountNumber) + "_" + self.accountType + "_" + self.name + ".txt"
-        self.file = open(self.filename, "a+")
+        self.file = open(self.filename, "w+")
 
     def depostMoney(self, amount):
         self.balance += amount
